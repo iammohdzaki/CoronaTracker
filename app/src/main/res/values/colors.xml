@@ -5,6 +5,8 @@
     <color name="colorAccent">#6e5feb</color>
     <color name="colorAccentDark">#26252e</color>
 
+    <color name="yellow">#f7d453</color>
+
     <color name="popup_bg_color">#ffffff</color>
     <color name="popup_heading_color">#99474747</color>
     <color name="popup_message_color">#474747</color>
