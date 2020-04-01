@@ -1,11 +1,46 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="CustomTextAppearance" parent="android:TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="fontPath">font/Montserrat-Regular.ttf</item>
+    </style>
+
+    <style name="CustomTextAppearance.Bold" parent="CustomTextAppearance">
+        <item name="fontPath">font/Montserrat-Bold.ttf</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Font Styles-->
+    <style name="CustomTextAppearance.Semibold" parent="CustomTextAppearance">
+        <item name="fontPath">font/Montserrat-Semibold.ttf</item>
+    </style>
+
+    <style name="MontserratBlack" parent="CustomTextAppearance">
+        <item name="fontPath">font/Montserrat-Black.ttf</item>
+    </style>
+
+    <style name="MontserratBold" parent="CustomTextAppearance">
+        <item name="fontPath">font/Montserrat-Bold.ttf</item>
+    </style>
+
+    <style name="MontserratExtraLight" parent="CustomTextAppearance">
+        <item name="fontPath">font/Montserrat-ExtraLight.ttf</item>
+    </style>
+
+    <style name="MontserratLight" parent="CustomTextAppearance">
+        <item name="fontPath">font/Montserrat-Light.ttf</item>
+    </style>
+
+    <style name="MontserratSemiBold" parent="CustomTextAppearance">
+        <item name="fontPath">font/Montserrat-SemiBold.ttf</item>
     </style>
 
 </resources>

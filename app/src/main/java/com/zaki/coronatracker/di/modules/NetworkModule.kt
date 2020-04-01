@@ -1,5 +1,8 @@
 package com.zaki.coronatracker.di.modules
 
+import com.zaki.coronatracker.apis.Apis
+import com.zaki.coronatracker.utils.API_KEY
+import com.zaki.coronatracker.utils.BASE_URL
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.logging.HttpLoggingInterceptor
@@ -22,13 +25,11 @@ val networkModule = module {
         OkHttpClient.Builder().apply {
             addInterceptor(get<HttpLoggingInterceptor>())
             addInterceptor { chain ->
-
-                //Log.d("AppModule", token)
-
                 val request: Request =
                     chain.request()
                         .newBuilder()
-                        // .addHeader("x-access-token", get<Storage>().getString("token"))
+                        .addHeader("x-rapidapi-host", "coronavirus-monitor.p.rapidapi.com")
+                        .addHeader("x-rapidapi-key", API_KEY)
                         .build()
 
                 chain.proceed(request)
@@ -37,9 +38,12 @@ val networkModule = module {
     }
     single {
         Retrofit.Builder()
-            //.baseUrl(BuildConfig.BASE_URL)
+            .baseUrl(BASE_URL)
             .client(get<OkHttpClient>())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
+    }
+    single {
+        get<Retrofit>().create(Apis::class.java)
     }
 }

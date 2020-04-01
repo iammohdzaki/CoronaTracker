@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "128574666539",
+    "firebase_url": "https://coronatracker-69d79.firebaseio.com",
+    "project_id": "coronatracker-69d79",
+    "storage_bucket": "coronatracker-69d79.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:128574666539:android:6c20c4c7c9065a2a8eb76e",
+        "android_client_info": {
+          "package_name": "com.zaki.coronatracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "128574666539-r4j8preplq3vk2j55bnqi9llfr9360hg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2RAtxU6C-7ioNAT04iRqTlsEY8bmKkvE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "128574666539-r4j8preplq3vk2j55bnqi9llfr9360hg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
