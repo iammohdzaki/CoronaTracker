@@ -26,7 +26,7 @@ class CoronaApp :Application(),LifecycleObserver{
         //Font Library initialization
         CalligraphyConfig.initDefault(
             CalligraphyConfig.Builder()
-                .setDefaultFontPath("font/Montserrat-Regular.ttf")
+                .setDefaultFontPath("font/Montserrat-Bold.ttf")
                 .setFontAttrId(R.attr.fontPath)
                 .build()
         )

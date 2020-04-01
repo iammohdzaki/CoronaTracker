@@ -2,4 +2,7 @@
     <string name="app_name">CoronaTracker</string>
     <string name="home_text">Home</string>
     <string name="discover_text">Discover</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
