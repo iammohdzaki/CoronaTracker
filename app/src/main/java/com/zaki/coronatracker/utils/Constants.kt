@@ -6,4 +6,4 @@ package com.zaki.coronatracker.utils
  */
 
 const val API_KEY="070598e994msh61b6a43e8a96cd0p1923f0jsn98f8225fabca"
-const val BASE_URL="https://coronavirus-monitor.p.rapidapi.com/coronavirus"
+const val BASE_URL="https://corona.lmao.ninja"

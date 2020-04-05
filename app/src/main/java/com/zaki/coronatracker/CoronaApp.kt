@@ -7,6 +7,12 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import androidx.lifecycle.ProcessLifecycleOwner
+import com.zaki.coronatracker.di.modules.networkModule
+import com.zaki.coronatracker.di.modules.repositoryModules
+import com.zaki.coronatracker.di.modules.storageModules
+import com.zaki.coronatracker.di.modules.viewModelModules
+import org.koin.android.ext.koin.androidContext
+import org.koin.core.context.startKoin
 import timber.log.Timber
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig
 import java.lang.ref.WeakReference
@@ -21,6 +27,8 @@ class CoronaApp :Application(),LifecycleObserver{
     override fun onCreate() {
         super.onCreate()
 
+        initializeKoin()
+
         myApplicationContext= WeakReference(this)
 
         //Font Library initialization
@@ -32,6 +40,20 @@ class CoronaApp :Application(),LifecycleObserver{
         )
 
         ProcessLifecycleOwner.get().lifecycle.addObserver(this)
+    }
+
+    private fun initializeKoin() {
+        startKoin {
+            androidContext(this@CoronaApp)
+            modules(
+                listOf(
+                    networkModule,
+                    repositoryModules,
+                    storageModules,
+                    viewModelModules
+                )
+            )
+        }
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_STOP)

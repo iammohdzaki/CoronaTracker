@@ -18,7 +18,7 @@ class HostActivity : BaseActivity() , View.OnClickListener{
         setOnClickListeners(this,tvHome,tvDiscover)
         Handler().postDelayed({
             tvHome.performClick()
-        },100)
+        },1000)
     }
 
     override fun onClick(view: View?) {

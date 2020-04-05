@@ -28,8 +28,6 @@ val networkModule = module {
                 val request: Request =
                     chain.request()
                         .newBuilder()
-                        .addHeader("x-rapidapi-host", "coronavirus-monitor.p.rapidapi.com")
-                        .addHeader("x-rapidapi-key", API_KEY)
                         .build()
 
                 chain.proceed(request)
