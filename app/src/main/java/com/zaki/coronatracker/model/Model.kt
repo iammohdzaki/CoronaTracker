@@ -11,6 +11,7 @@ data class GlobalStats(
     @SerializedName("cases") var totalCases: Int = 0,
     @SerializedName("todayCases") var todayCases: Int = 0,
     @SerializedName("deaths") var totalDeaths: Int = 0,
+    @SerializedName("todayDeaths") var todayDeaths: Int = 0,
     @SerializedName("recovered") var totalRecovered: Int = 0,
     @SerializedName("active") var activeCases: Int = 0,
     @SerializedName("critical") var criticalCases: Int = 0,

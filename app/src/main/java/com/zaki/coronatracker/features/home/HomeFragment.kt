@@ -7,12 +7,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import android.widget.Toast.makeText
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 
 import com.zaki.coronatracker.R
 import com.zaki.coronatracker.databinding.FragmentHomeBinding
 import com.zaki.coronatracker.model.CommonResponse
+import com.zaki.coronatracker.model.GlobalStats
 import kotlinx.android.synthetic.main.fragment_home.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -37,13 +39,22 @@ class HomeFragment : Fragment() {
             .observe(viewLifecycleOwner, Observer { outcome ->
                 when (outcome) {
                     is CommonResponse.Success -> {
-                        tvCurrentDate.text = outcome.data.activeCases.toString()
+                        setData(outcome.data)
                     }
                     is CommonResponse.Failure -> {
-                        Toast.makeText(activity, "Unable To Fetch Data", Toast.LENGTH_SHORT)
+                        makeText(activity, "Unable To Fetch Data", Toast.LENGTH_SHORT)
                             .show()
                     }
                 }
             })
+    }
+
+    private fun setData(globalStats: GlobalStats){
+        tvTotalCases.text=globalStats.totalCases.toString()
+        tvTodayCases.text=globalStats.todayCases.toString()
+        tvTotalDeaths.text=globalStats.totalDeaths.toString()
+        tvTodayDeaths.text=globalStats.todayDeaths.toString()
+        tvActiveCases.text=globalStats.activeCases.toString()
+        tvTotalRecovered.text=globalStats.totalRecovered.toString()
     }
 }

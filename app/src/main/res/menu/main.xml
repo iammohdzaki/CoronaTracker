@@ -9,5 +9,13 @@
         android:id="@id/discover"
         android:icon="@drawable/ic_discover"/>
 
+    <item android:title="Feeds"
+        android:id="@id/feeds"
+        android:icon="@drawable/ic_feeds"/>
+
+    <item android:title="Safety Tips"
+        android:id="@id/safety"
+        android:icon="@drawable/ic_safety"/>
+
 
 </menu>

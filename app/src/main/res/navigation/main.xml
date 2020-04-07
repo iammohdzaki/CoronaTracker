@@ -14,4 +14,13 @@
         android:name="com.zaki.coronatracker.features.discover.DiscoverFragment"
         android:label="Discover"
         tools:layout="@layout/fragment_discover" />
+    <fragment
+        android:id="@+id/feeds"
+        android:name="com.zaki.coronatracker.features.feeds.FeedsFragment"
+        android:label="FeedsFragment" />
+    <fragment
+        android:id="@+id/safety"
+        android:name="com.zaki.coronatracker.features.safety.SafetyFragment"
+        android:label="fragment_safety"
+        tools:layout="@layout/fragment_safety" />
 </navigation>
