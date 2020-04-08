@@ -15,8 +15,8 @@
         android:label="Discover"
         tools:layout="@layout/fragment_discover" />
     <fragment
-        android:id="@+id/feeds"
-        android:name="com.zaki.coronatracker.features.feeds.FeedsFragment"
+        android:id="@+id/countries"
+        android:name="com.zaki.coronatracker.features.countries.CountriesFragment"
         android:label="FeedsFragment" />
     <fragment
         android:id="@+id/safety"

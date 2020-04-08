@@ -64,13 +64,13 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="feedsFragment">
+                  <entry key="feeds">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="468" />
-                            <option name="y" value="15" />
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -88,13 +88,13 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="safetyFragment">
+                  <entry key="safety">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="685" />
-                            <option name="y" value="20" />
+                            <option name="x" value="256" />
+                            <option name="y" value="12" />
                           </Point>
                         </option>
                       </LayoutPositions>

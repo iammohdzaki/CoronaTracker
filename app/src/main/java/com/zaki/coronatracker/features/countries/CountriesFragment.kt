@@ -1,4 +1,4 @@
-package com.zaki.coronatracker.features.feeds
+package com.zaki.coronatracker.features.countries
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,17 +8,14 @@ import android.view.ViewGroup
 
 import com.zaki.coronatracker.R
 
-/**
- * A simple [Fragment] subclass.
- */
-class FeedsFragment : Fragment() {
+class CountriesFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_feeds, container, false)
+        return inflater.inflate(R.layout.fragment_countries, container, false)
     }
 
 }

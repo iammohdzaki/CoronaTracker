@@ -17,4 +17,6 @@
     <string name="deaths_per_million">Deaths Per Million</string>
     <string name="tests_per_million">Tests Per Million</string>
     <string name="total_tests_done">Total Tests Done</string>
+    <string name="last_updated">Last Updated</string>
+    <string name="search_country">Search Country</string>
 </resources>

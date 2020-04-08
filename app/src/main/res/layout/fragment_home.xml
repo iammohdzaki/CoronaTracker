@@ -24,6 +24,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <TextView
+            android:id="@+id/tvLastUpdated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textColor="@color/white"
+            android:textAppearance="@style/CustomTextAppearance.Semibold"
+            android:text="@string/last_updated"
+            android:textSize="14sp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tvCurrentDate"
+            />
+
     <TextView
         android:id="@+id/tvCurrentDate"
         android:layout_width="wrap_content"
@@ -35,17 +51,9 @@
         android:drawablePadding="10dp"
         tools:text="Sunday, March 29th"
         android:textSize="@dimen/font_large"
-        android:layout_margin="20dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tvLastUpdated"
         app:layout_constraintEnd_toEndOf="parent"
-        />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvInfoImage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        app:layout_constraintTop_toBottomOf="@id/tvCurrentDate"
         />
 
     <TextView
@@ -59,7 +67,7 @@
         android:textSize="@dimen/font_xlarge"
         android:layout_margin="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rvInfoImage"
+        app:layout_constraintTop_toBottomOf="@id/tvCurrentDate"
         />
 
     <LinearLayout

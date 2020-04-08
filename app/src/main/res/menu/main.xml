@@ -5,12 +5,12 @@
         android:id="@id/home"
         android:icon="@drawable/ic_home"/>
 
-    <item android:title="Discover"
+    <item android:title="My Country"
         android:id="@id/discover"
         android:icon="@drawable/ic_discover"/>
 
-    <item android:title="Feeds"
-        android:id="@id/feeds"
+    <item android:title="Countries"
+        android:id="@id/countries"
         android:icon="@drawable/ic_feeds"/>
 
     <item android:title="Safety Tips"

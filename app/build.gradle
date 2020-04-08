@@ -150,6 +150,11 @@ dependencies {
     implementation 'com.jakewharton.timber:timber:4.7.1'
 
     /**
+     * Animation Library
+     */
+    implementation "com.airbnb.android:lottie:3.0.1"
+
+    /**
      * Calligraphy (custom font lib)
      */
     implementation "uk.co.chrisjenx:calligraphy:$caligraphyVersion"
