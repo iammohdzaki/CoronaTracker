@@ -56,5 +56,11 @@ class HomeFragment : Fragment() {
         tvTodayDeaths.text=globalStats.todayDeaths.toString()
         tvActiveCases.text=globalStats.activeCases.toString()
         tvTotalRecovered.text=globalStats.totalRecovered.toString()
+        tvCritical.text=globalStats.criticalCases.toString()
+        tvAffectedCountries.text=globalStats.affectedCountries.toString()
+        tvDeathsPer.text=globalStats.deathsPerOneMillion.toString()
+        tvCasesPer.text=globalStats.casesPerOneMillion.toString()
+        tvTestPer.text=globalStats.testsPerOneMillion.toString()
+        tvTotalTest.text=globalStats.tests.toString()
     }
 }

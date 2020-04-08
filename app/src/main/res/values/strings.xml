@@ -12,4 +12,9 @@
     <string name="today_deaths">Today Deaths</string>
     <string name="recovered">Recovered</string>
     <string name="active_cases">Active Cases</string>
+    <string name="critical">Critical</string>
+    <string name="affected_countries">Affected Countries</string>
+    <string name="deaths_per_million">Deaths Per Million</string>
+    <string name="tests_per_million">Tests Per Million</string>
+    <string name="total_tests_done">Total Tests Done</string>
 </resources>

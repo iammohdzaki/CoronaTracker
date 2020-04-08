@@ -15,8 +15,10 @@ data class GlobalStats(
     @SerializedName("recovered") var totalRecovered: Int = 0,
     @SerializedName("active") var activeCases: Int = 0,
     @SerializedName("critical") var criticalCases: Int = 0,
+    @SerializedName("tests") var tests: Int = 0,
     @SerializedName("casesPerOneMillion") var casesPerOneMillion: Int = 0,
     @SerializedName("deathsPerOneMillion") var deathsPerOneMillion: Double = 0.0,
+    @SerializedName("testsPerOneMillion") var testsPerOneMillion: Double = 0.0,
     @SerializedName("affectedCountries") var affectedCountries: Int = 0,
     @SerializedName("updated") var lastUpdated: Long = 0L
 )
