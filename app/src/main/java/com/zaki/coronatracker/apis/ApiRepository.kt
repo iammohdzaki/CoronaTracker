@@ -1,6 +1,7 @@
 package com.zaki.coronatracker.apis
 
 import android.util.Log
+import com.zaki.coronatracker.model.CountryStats
 import com.zaki.coronatracker.model.GlobalStats
 import java.lang.Exception
 
@@ -14,6 +15,15 @@ class ApiRepository(private var service:Apis){
     suspend fun getGlobalStats(): GlobalStats?{
         return try {
             service.getGlobalStats()
+        }catch (e:Exception){
+            Log.e(ApiRepository::class.java.name, e.toString())
+            null
+        }
+    }
+
+    suspend fun getCountriesList(): ArrayList<CountryStats>?{
+        return  try{
+            service.getAllCountries()
         }catch (e:Exception){
             Log.e(ApiRepository::class.java.name, e.toString())
             null

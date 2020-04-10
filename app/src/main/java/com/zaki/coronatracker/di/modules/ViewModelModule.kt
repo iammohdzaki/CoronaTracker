@@ -1,7 +1,7 @@
 package com.zaki.coronatracker.di.modules
 
+import com.zaki.coronatracker.features.countries.CountriesViewModel
 import com.zaki.coronatracker.features.home.HomeViewModel
-import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 /**
@@ -11,4 +11,5 @@ import org.koin.dsl.module
 
 val viewModelModules = module {
     single { HomeViewModel(get()) }
+    single { CountriesViewModel(get()) }
 }
