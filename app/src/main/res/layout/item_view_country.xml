@@ -1,16 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:padding="20dp"
-    android:background="@drawable/selector_dark_background"
-    >
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/selector_dark_background">
 
-    <!--<ImageView
+    <ImageView
+        android:id="@+id/ivFlag"
+        android:layout_width="45dp"
+        android:layout_height="0dp"
+        android:src="@drawable/us"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvCountryName"
+        app:layout_constraintBottom_toBottomOf="@id/tvUpdatedAgo"
+        />
+
+    <TextView
+        android:id="@+id/tvCountryName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="sam"
-        />-->
+        android:textSize="14sp"
+        tools:text="United States"
+        android:textColor="@color/white"
+        android:layout_marginStart="8dp"
+        android:textAppearance="@style/CustomTextAppearance.Semibold"
+        app:layout_constraintStart_toEndOf="@id/ivFlag"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvUpdatedAgo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        tools:text="United States"
+        android:textColor="@color/white"
+        android:layout_marginStart="8dp"
+        android:textAppearance="@style/MontserratLight"
+        app:layout_constraintStart_toEndOf="@id/ivFlag"
+       app:layout_constraintTop_toBottomOf="@id/tvCountryName"
+        />
+
+    <TextView
+        android:id="@+id/tvTotalCasesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textAppearance="@style/CustomTextAppearance.Bold"
+        android:text="@string/total_cases"
+        android:textSize="12sp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvUpdatedAgo"
+        />
+
+    <TextView
+        android:id="@+id/tvTotalCases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textAppearance="@style/CustomTextAppearance.Bold"
+        android:textColor="@color/yellow"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvTotalCasesLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTotalCasesLabel"
+        tools:text="15,240" />
+
+
+    <TextView
+        android:id="@+id/tvTotalRecoveredLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textAppearance="@style/CustomTextAppearance.Bold"
+        android:text="@string/recovered"
+        android:textSize="12sp"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@id/tvTotalCasesLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvUpdatedAgo"
+        />
+
+    <TextView
+        android:id="@+id/tvTotalRecovered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textAppearance="@style/CustomTextAppearance.Bold"
+        android:textColor="@color/yellow"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvTotalRecoveredLabel"
+        app:layout_constraintStart_toEndOf="@id/tvTotalCasesLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvTotalRecoveredLabel"
+        app:layout_constraintStart_toStartOf="@id/tvTotalRecoveredLabel"
+        tools:text="15,240" />
+
+    <TextView
+        android:id="@+id/tvDeathsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textAppearance="@style/CustomTextAppearance.Bold"
+        android:text="@string/recovered"
+        android:textSize="12sp"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@id/tvTotalRecoveredLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvUpdatedAgo"
+        />
+
+    <TextView
+        android:id="@+id/tvDeaths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textAppearance="@style/CustomTextAppearance.Bold"
+        android:textColor="@color/yellow"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvDeathsLabel"
+        app:layout_constraintStart_toEndOf="@id/tvTotalCasesLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvDeathsLabel"
+        app:layout_constraintStart_toStartOf="@id/tvDeathsLabel"
+        tools:text="15,240" />
+
+    <TextView
+        android:id="@+id/tvTodayLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textAppearance="@style/CustomTextAppearance.Bold"
+        android:text="@string/today"
+        android:textSize="12sp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvTodayCases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textAppearance="@style/CustomTextAppearance.Bold"
+        android:textColor="@color/yellow"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTodayLabel"
+        app:layout_constraintStart_toStartOf="@id/tvTodayLabel"
+        tools:text="15,24000 00" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
