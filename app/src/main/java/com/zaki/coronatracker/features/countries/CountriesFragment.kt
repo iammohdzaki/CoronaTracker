@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.core.widget.doAfterTextChanged
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -33,6 +34,7 @@ class CountriesFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_countries, container, false)
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
+        showLoading(true)
         bindObserver()
         setListeners()
         setUpRecyclerView()
@@ -50,6 +52,7 @@ class CountriesFragment : Fragment() {
                         .show()
                 }
             }
+            showLoading(false)
         })
     }
 
@@ -63,6 +66,17 @@ class CountriesFragment : Fragment() {
         binding.rvCountries.apply {
             layoutManager=LinearLayoutManager(context)
             adapter=listAdapter
+        }
+    }
+
+    private fun showLoading(isLoading:Boolean){
+        binding.rvCountries.isVisible = !isLoading
+        binding.tvSearchCountry.isVisible = !isLoading
+        binding.slLoading.isVisible = isLoading
+        if(isLoading){
+            binding.slLoading.startShimmer()
+        }else{
+            binding.slLoading.stopShimmer()
         }
     }
 

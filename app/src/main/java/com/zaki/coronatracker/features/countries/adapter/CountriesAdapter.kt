@@ -76,6 +76,7 @@ class CountriesAdapter(
                 tvCountryName.text=countryStats.countryName
                 Glide.with(mActivity)
                     .load(countryStats.countryInfo.flag)
+                    .placeholder(R.drawable.ic_flag_placeholder)
                     .into(ivFlag)
                 tvUpdatedAgo.text=countryStats.lastUpdated.toString()
                 tvTotalCases.text=String.format("%,d",countryStats.totalCases)

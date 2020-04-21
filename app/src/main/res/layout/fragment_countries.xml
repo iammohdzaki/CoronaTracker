@@ -2,44 +2,58 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <data>
         <variable
             name="viewModel"
             type="com.zaki.coronatracker.features.countries.CountriesViewModel" />
     </data>
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPrimary">
 
-    <EditText
-        android:id="@+id/tvSearchCountry"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="14dp"
-        android:hint="@string/search_country"
-        android:textColor="@color/yellow"
-        android:textAppearance="@style/MontserratLight"
-        android:textColorHint="@color/yellow"
-        android:drawablePadding="10dp"
-        android:drawableStart="@drawable/ic_search"
-        android:background="@drawable/selector_search_bar"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="no"
-        android:inputType="text" />
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
 
-   <androidx.recyclerview.widget.RecyclerView
-       android:id="@+id/rvCountries"
-       android:layout_width="match_parent"
-       android:layout_height="0dp"
-       android:layout_margin="20dp"
-       app:layout_constraintBottom_toBottomOf="parent"
-       app:layout_constraintTop_toBottomOf="@id/tvSearchCountry"
-       />
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/slLoading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <include layout="@layout/shimmer_loading_layout" />
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <EditText
+            android:id="@+id/tvSearchCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="30dp"
+            android:autofillHints="no"
+            android:background="@drawable/selector_search_bar"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="10dp"
+            android:hint="@string/search_country"
+            android:inputType="text"
+            android:padding="14dp"
+            android:textAppearance="@style/MontserratLight"
+            android:textColor="@color/yellow"
+            android:textColorHint="@color/yellow"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCountries"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="20dp"
+            android:visibility="visible"
+            tools:listitem="@layout/item_view_country"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSearchCountry" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

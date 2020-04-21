@@ -16,8 +16,7 @@
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/tvCountryName"
-        app:layout_constraintBottom_toBottomOf="@id/tvUpdatedAgo"
-        />
+        app:layout_constraintBottom_toBottomOf="@id/tvUpdatedAgo" />
 
     <TextView
         android:id="@+id/tvCountryName"
@@ -111,7 +110,7 @@
         android:gravity="center"
         android:textColor="@color/white"
         android:textAppearance="@style/CustomTextAppearance.Bold"
-        android:text="@string/recovered"
+        android:text="@string/total_deaths"
         android:textSize="12sp"
         android:layout_marginTop="14dp"
         android:layout_marginStart="16dp"

@@ -12,12 +12,12 @@ import retrofit2.http.Query
 
 interface Apis {
 
-    @GET("/all")
+    @GET("/v2/all")
     suspend fun getGlobalStats() : GlobalStats
 
-    @GET("/countries?sort=cases")
+    @GET("/v2/countries?sort=cases")
     suspend fun getAllCountries():ArrayList<CountryStats>
 
-    @GET("/countries")
+    @GET("/v2/countries")
     suspend fun getCountry(@Query("countryName") countryName:String):CountryStats
 }
